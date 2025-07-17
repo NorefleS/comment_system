@@ -1,0 +1,367 @@
+/*--------------------Обнуление стилей---------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: "Inter", sans-serif;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------------------------------------------------------*/
+
+body {
+    padding-left: 289px;
+}
+
+.commentBlock__border {
+    height: 3px;
+    background-color: #D9D9D9;
+}
+
+.commentBlock {
+    width: 1022px;
+    margin-top: 50px;
+}
+
+.commentBlock__list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.commentBlock__li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.commentBlock__li:first-child {
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #000;
+}
+
+.commentsBtn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.commentBlock__filter-favourite {
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 1px #000 solid;
+    opacity: 0.4;
+}
+
+.filterMenu {
+    position: relative;
+}
+
+.filterArrow {
+    cursor: pointer;
+}
+
+.filter {
+    display: none;
+    width: 229px;
+    height: 98px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+}
+
+.filter__checkImage {
+    position: absolute;
+    left: 8px;
+}
+
+.filter {
+    width: 229px;
+    height: 108px;
+}
+
+.filter__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px 16px 9px 30px;
+}
+
+.filter__span {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.commentBlock__link {
+    text-decoration: none;
+    color: #000;
+}
+
+.commentBlock__link-span {
+    opacity: 0.4;
+}
+
+.commentBlock__form {
+    display: flex;
+    gap: 30px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.form__name-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 688px;
+}
+
+.form__avatar {
+    width: 61px;
+    height: 61px;
+    cursor: pointer;
+}
+
+.form__labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__labels {
+    flex-wrap: wrap;
+}
+
+.form__name {
+    font-weight: 500;
+    font-size: 18px;
+    color: #122ac0;
+}
+
+.form__symbols {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.4;
+    color: #000;
+}
+
+.form__input {
+    width: 688px;
+    min-height: 61px;
+    max-height: 600px;
+    padding: 20px 20px 20px 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.8;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    resize: none;
+    overflow-y: hidden;
+}
+
+.form__maxlength {
+    display: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: #f00;
+    position: absolute;
+}
+
+.form__button {
+    width: 213px;
+    height: 61px;
+    margin-top: 37px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    opacity: 0.4;
+    border: none;
+    border-radius: 5px;
+    background: #a1a1a1;
+    position: relative;
+}
+
+.commentBlock__commentaire {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 28px;
+}
+
+.commentaire__name-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.commentaire__name-date {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.form__dateBlock {
+    display: flex;
+    gap: 7px;
+}
+
+.form__date {
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.4;
+    color: #000;
+}
+
+.answer__name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.commentaire__text {
+    width: 916px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+}
+
+.commentaire__answerBlock {
+    display: flex;
+    gap: 25px;
+}
+
+.answersBlock {
+    display: flex;
+    flex-direction: column;
+    margin-left: 105px;
+}
+
+.answerBlock__button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.answerBlock__span {
+    opacity: 0.4;
+}
+
+.ratingNumber {
+    font-weight: 500;
+    font-size: 18px;
+    color: #8ac540;
+}
+
+.ratingBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ratingBtn {
+    width: 20px;
+    height: 27px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dislikeBtn {
+    background-image: url("./svg/dislike.svg");
+    background-repeat: no-repeat;
+}
+
+.likeBtn {
+    background-image: url("./svg/like.svg");
+    background-repeat: no-repeat;
+}
+
+.answerToUser {
+    display: flex;
+    gap: 30px;
+}
+
+.answerToUser__text {
+    display: flex;
+    justify-content: space-between;
+    width: 825px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+}
+
+.answerInputBtn {
+    width: 113px;
+    height: 61px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    opacity: 0.4;
+    border: none;
+    border-radius: 5px;
+    background: #a1a1a1;
+}

@@ -1,16 +1,24 @@
 class Filter {
-    commentList: any;
-    filterBtn: any;
-    filterMenu: any;
-    filterByDates: any;
-    filterByRatings: any;
-    filterByTime: any;
-    filterByAnswers: any;
-    commentContainer: any;
+    commentList: HTMLElement;
+    filterBtn: HTMLElement;
+    filterMenu: HTMLElement;
+    filterByDates: HTMLElement;
+    filterByRatings: HTMLElement;
+    filterByTime: HTMLElement;
+    filterByAnswers: HTMLElement;
+    commentContainer: HTMLCollectionOf<Element>;
     hiddenFilter: boolean;
-    checkMark: any;
+    checkMark: HTMLImageElement;
 
-    constructor(commentList: any, filterBtn: any, filterMenu: any, filterByDates: any, filterByRatings: any, filterByTime: any, filterByAnswers: any, commentContainer: any) {
+    constructor(commentList: HTMLElement,
+        filterBtn: HTMLElement,
+        filterMenu: HTMLElement,
+        filterByDates: HTMLElement,
+        filterByRatings: HTMLElement,
+        filterByTime: HTMLElement,
+        filterByAnswers: HTMLElement,
+        commentContainer: HTMLCollectionOf<Element>
+    ) {
         this.commentList = commentList;
         this.filterBtn = filterBtn;
         this.filterMenu = filterMenu;
@@ -20,8 +28,8 @@ class Filter {
         this.filterByAnswers = filterByAnswers;
         this.commentContainer = commentContainer;
         this.hiddenFilter = true;
-        this.checkMark = document.createElement("img");
-        this.checkMark.classList.add(".filter__checkImage");
+        this.checkMark = document.createElement("img") as HTMLImageElement;
+        this.checkMark.classList.add("filter__checkImage");
         this.checkMark.src = "./svg/check.svg";
         this.checkMark.style.position = "absolute";
         this.checkMark.style.left = "8px";
@@ -40,7 +48,7 @@ class Filter {
     }
 
     sorting() {
-        const arrow: any = document.querySelector(".filterArrow");
+        const arrow = document.querySelector<HTMLImageElement>(".filterArrow")!;
 
         arrow.addEventListener("click", () => {
             if (arrow.classList.contains("arrowNormal")) {
@@ -54,12 +62,14 @@ class Filter {
             }
         });
 
-        this.filterMenu.addEventListener("click", (event: any) => {
-            const filterByDates = event.target.closest(".filterByDates");
-            const filterByRatings = event.target.closest(".filterByRatings");
-            const filterByTime = event.target.closest(".filterByTime");
-            const filterByAnswers = event.target.closest(".filterByAnswers");
-            const comments = Array.from(this.commentContainer);
+        this.filterMenu.addEventListener("click", (event: Event) => {
+            const target = event.target as HTMLElement;
+            const filterByDates = target.closest(".filterByDates");
+            const filterByRatings = target.closest(".filterByRatings");
+            const filterByTime = target.closest(".filterByTime");
+            const filterByAnswers = target.closest(".filterByAnswers");
+            
+            const comments = Array.from(this.commentContainer) as Element[];
             
             if (filterByDates) {
                 const filterSpanDate = filterByDates.querySelector(".filter__span");

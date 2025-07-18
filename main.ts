@@ -5,17 +5,17 @@ import Form from "./form";
 import Rating from "./rating"
 
 const commentBlock = document.querySelector(".commentBlock");
-const commentList: any = document.querySelector(".commentList");
+const commentList = document.querySelector(".commentList") as HTMLElement;
 const commentContainer = document.getElementsByClassName("commentContainer");
 const comment = document.getElementsByClassName("commentBlock__commentaire");
 
 // Переменные элементов кнопок фильтра и избранного
-const filterBtn = document.querySelector(".filterBtn");
-const filterMenu = document.querySelector(".filter");
-const filterByDates = document.querySelector(".filterByDates");
-const filterByRatings = document.querySelector(".filterByRatings");
-const filterByTime = document.querySelector(".filterByTime");
-const filterByAnswers = document.querySelector(".filterByAnswers");
+const filterBtn = document.querySelector(".filterBtn") as HTMLElement;
+const filterMenu = document.querySelector(".filter") as HTMLElement;
+const filterByDates = document.querySelector(".filterByDates") as HTMLElement;
+const filterByRatings = document.querySelector(".filterByRatings") as HTMLElement;
+const filterByTime = document.querySelector(".filterByTime") as HTMLElement;
+const filterByAnswers = document.querySelector(".filterByAnswers") as HTMLElement;
 const favouriteMenuBtn = document.querySelector(".favouriteMenuBtn");
 
 // Переменные элементов формы
@@ -40,7 +40,7 @@ function mainBuild() {
     rating.ratingChange();
     form.maxlengthInput();
 
-    commentList.innerHTML = localStorage.getItem("commentList");
+    commentList.innerHTML = localStorage.getItem("commentList") as string;
 }
 
 mainBuild();

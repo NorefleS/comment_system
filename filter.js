@@ -12,7 +12,7 @@ var Filter = /** @class */ (function () {
         this.commentContainer = commentContainer;
         this.hiddenFilter = true;
         this.checkMark = document.createElement("img");
-        this.checkMark.classList.add(".filter__checkImage");
+        this.checkMark.classList.add("filter__checkImage");
         this.checkMark.src = "./svg/check.svg";
         this.checkMark.style.position = "absolute";
         this.checkMark.style.left = "8px";
@@ -46,10 +46,11 @@ var Filter = /** @class */ (function () {
             }
         });
         this.filterMenu.addEventListener("click", function (event) {
-            var filterByDates = event.target.closest(".filterByDates");
-            var filterByRatings = event.target.closest(".filterByRatings");
-            var filterByTime = event.target.closest(".filterByTime");
-            var filterByAnswers = event.target.closest(".filterByAnswers");
+            var target = event.target;
+            var filterByDates = target.closest(".filterByDates");
+            var filterByRatings = target.closest(".filterByRatings");
+            var filterByTime = target.closest(".filterByTime");
+            var filterByAnswers = target.closest(".filterByAnswers");
             var comments = Array.from(_this.commentContainer);
             if (filterByDates) {
                 var filterSpanDate = filterByDates.querySelector(".filter__span");

@@ -6,7 +6,7 @@ class Filter {
     filterByRatings: HTMLElement;
     filterByTime: HTMLElement;
     filterByAnswers: HTMLElement;
-    commentContainer: HTMLCollectionOf<Element>;
+    commentContainer: HTMLCollectionOf<HTMLElement>;
     hiddenFilter: boolean;
     checkMark: HTMLImageElement;
 
@@ -17,7 +17,7 @@ class Filter {
         filterByRatings: HTMLElement,
         filterByTime: HTMLElement,
         filterByAnswers: HTMLElement,
-        commentContainer: HTMLCollectionOf<Element>
+        commentContainer: HTMLCollectionOf<HTMLElement>
     ) {
         this.commentList = commentList;
         this.filterBtn = filterBtn;
@@ -69,7 +69,7 @@ class Filter {
             const filterByTime = target.closest(".filterByTime");
             const filterByAnswers = target.closest(".filterByAnswers");
             
-            const comments = Array.from(this.commentContainer) as Element[];
+            const comments = Array.from(this.commentContainer) as HTMLElement[];
             
             if (filterByDates) {
                 const filterSpanDate = filterByDates.querySelector(".filter__span");

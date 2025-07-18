@@ -1,7 +1,7 @@
 class Rating {
-    commentList: any;
+    commentList: HTMLElement;
 
-    constructor(commentList: any) {
+    constructor(commentList: HTMLElement) {
         this.commentList = commentList;
     }
 

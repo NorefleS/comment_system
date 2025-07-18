@@ -1,9 +1,9 @@
 class Favourite {
-    commentBlock: any;
-    favouriteMenuBtn: any;
-    comment: any;
+    commentBlock: HTMLElement;
+    favouriteMenuBtn: HTMLElement;
+    comment: HTMLCollectionOf<HTMLElement>;
 
-    constructor(commentBlock: any, favouriteMenuBtn: any, comment: any) {
+    constructor(commentBlock: HTMLElement, favouriteMenuBtn: HTMLElement, comment: HTMLCollectionOf<HTMLElement>) {
         this.commentBlock = commentBlock;
         this.favouriteMenuBtn = favouriteMenuBtn;
         this.comment = comment;

@@ -1,12 +1,12 @@
 class Form {
-    input: any;
-    symbols: any;
-    formBtn: any;
-    spanMaxlength: any;
-    commentList: any;
+    input: HTMLInputElement;
+    symbols: HTMLElement;
+    formBtn: HTMLElement;
+    spanMaxlength: HTMLElement;
+    commentList: HTMLElement;
     maxSymbols: number;
 
-    constructor(input: any, symbols: any, formBtn: any, spanMaxlength: any, commentList: any) {
+    constructor(input: HTMLInputElement, symbols: HTMLElement, formBtn: HTMLElement, spanMaxlength: HTMLElement, commentList: HTMLElement) {
         this.input = input;
         this.symbols = symbols;
         this.formBtn = formBtn;

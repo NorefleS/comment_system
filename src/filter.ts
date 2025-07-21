@@ -30,7 +30,7 @@ class Filter {
         this.hiddenFilter = true;
         this.checkMark = document.createElement("img") as HTMLImageElement;
         this.checkMark.classList.add("filter__checkImage");
-        this.checkMark.src = "./svg/check.svg";
+        this.checkMark.src = "/svg/check.svg";
         this.checkMark.style.position = "absolute";
         this.checkMark.style.left = "8px";
     }
@@ -52,11 +52,11 @@ class Filter {
 
         arrow.addEventListener("click", () => {
             if (arrow.classList.contains("arrowNormal")) {
-                arrow.src = "./svg/arrowReverse.svg";
+                arrow.src = "/svg/arrowReverse.svg";
                 arrow.classList.remove("arrowNormal");
                 arrow.classList.add("arrowReverse");
             } else if (arrow.classList.contains("arrowReverse")) {
-                arrow.src = "./svg/arrow.svg";
+                arrow.src = "/svg/arrow.svg";
                 arrow.classList.remove("arrowReverse");
                 arrow.classList.add("arrowNormal");
             }
@@ -69,9 +69,7 @@ class Filter {
             const filterByTime = target.closest(".filterByTime");
             const filterByAnswers = target.closest(".filterByAnswers");
             
-         const comments = Array.prototype.slice.call(
-						this.commentContainer
-					) as HTMLElement[];
+            const comments = Array.prototype.slice.call(this.commentContainer) as HTMLElement[];
             
             if (filterByDates) {
                 const filterSpanDate = filterByDates.querySelector(".filter__span");

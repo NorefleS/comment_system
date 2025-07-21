@@ -1,15 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var Rating = /** @class */ (function () {
-    function Rating(commentList) {
+class Rating {
+    constructor(commentList) {
         this.commentList = commentList;
     }
-    Rating.prototype.ratingChange = function () {
-        this.commentList.addEventListener("click", function (event) {
+    ratingChange() {
+        this.commentList.addEventListener("click", (event) => {
             if (event.target.closest(".likeBtn")) {
-                var ratingBlock = event.target.closest(".ratingBlock");
-                var ratingNumber = ratingBlock.querySelector(".ratingNumber");
-                var value = parseInt(ratingNumber.innerHTML);
+                const ratingBlock = event.target.closest(".ratingBlock");
+                const ratingNumber = ratingBlock.querySelector(".ratingNumber");
+                let value = parseInt(ratingNumber.innerHTML);
                 if (ratingBlock.classList.contains("unliked") && ratingBlock.classList.contains("undisliked")) {
                     ratingBlock.classList.remove("unliked");
                     ratingBlock.classList.add("liked");
@@ -36,9 +34,9 @@ var Rating = /** @class */ (function () {
                 ratingNumber.innerHTML = value;
             }
             else if (event.target.closest(".dislikeBtn")) {
-                var ratingBlock = event.target.closest(".ratingBlock");
-                var ratingNumber = ratingBlock.querySelector(".ratingNumber");
-                var value = parseInt(ratingNumber.innerHTML);
+                const ratingBlock = event.target.closest(".ratingBlock");
+                const ratingNumber = ratingBlock.querySelector(".ratingNumber");
+                let value = parseInt(ratingNumber.innerHTML);
                 if (ratingBlock.classList.contains("undisliked") && ratingBlock.classList.contains("unliked")) {
                     ratingBlock.classList.remove("undisliked");
                     ratingBlock.classList.add("disliked");
@@ -65,7 +63,6 @@ var Rating = /** @class */ (function () {
                 ratingNumber.innerHTML = value;
             }
         });
-    };
-    return Rating;
-}());
-exports.default = Rating;
+    }
+}
+export default Rating;

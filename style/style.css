@@ -331,12 +331,12 @@ body {
 }
 
 .dislikeBtn {
-    background-image: url("./svg/dislike.svg");
+    background-image: url("/svg/dislike.svg");
     background-repeat: no-repeat;
 }
 
 .likeBtn {
-    background-image: url("./svg/like.svg");
+    background-image: url("/svg/like.svg");
     background-repeat: no-repeat;
 }
 

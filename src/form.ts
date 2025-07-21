@@ -76,7 +76,7 @@ class Form {
         commentContainer.classList.add("commentContainer");
 
         const messege = `<div class="commentBlock__commentaire mainComment nofavourited">
-                                <img class="form__avatar" src="./avatars/myavatar.svg" alt="Мой аватар">
+                                <img class="form__avatar" src="/avatars/myavatar.svg" alt="Мой аватар">
                                     
                                 <div class="commentaire__name-text">
                                     <div class="commentaire__name-date">
@@ -94,12 +94,12 @@ class Form {
 
                                     <div class="commentaire__answerBlock">
                                         <button type="button" class="answerBlock__button answerBtn">
-                                            <img src="./svg/answer.svg" alt="">
+                                            <img src="/svg/answer.svg" alt="">
                                             <span class="answerBlock__span">Ответить</span>
                                         </button>
                                             
                                         <button type="button" class="answerBlock__button favouriteBtn heartNoAdded">
-                                            <img class="answerBlock__img-favourite" src="./svg/nofavourite.svg" alt="">
+                                            <img class="answerBlock__img-favourite" src="/svg/nofavourite.svg" alt="">
                                             <span class="answerBlock__span answerBlock__span-favourite">В избранное</span>
                                         </button>
                                             

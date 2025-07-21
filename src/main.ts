@@ -1,8 +1,8 @@
-import Filter from "./filter";
-import Answer from "./answer";
-import Favourite from "./favouriteMenu";
-import Form from "./form";
-import Rating from "./rating"
+import Filter from "./filter.js";
+import Answer from "./answer.js";
+import Favourite from "./favouriteMenu.js";
+import Form from "./form.js";
+import Rating from "./rating.js"
 
 const commentBlock = document.querySelector(".commentBlock") as HTMLElement;
 const commentList = document.querySelector(".commentList") as HTMLElement;

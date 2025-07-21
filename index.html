@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment System</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&family=Permanent+Marker&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="commentBlock">
+        <div class="commentBlock__border"></div>
+
+        <ul class="commentBlock__list">
+            <li class="commentBlock__li">
+                <a class="commentBlock__link" href="#">Комментарии <span class="commentBlock__link-span">(80)</span></a>
+            </li>
+
+            <li class="commentBlock__li filterMenu">
+                <button type="button" class="commentsBtn filterBtn">
+                    <span class="commentBlock__filter-favourite" href="#">По количеству оценок</span>
+                </button>
+                <img class="filterArrow arrowNormal" src="./svg/arrow.svg" alt="Фильтр">
+
+                <div class="filter">
+                    <ul class="filter__list">
+                        <li class="filter__li filterByDates">
+                            <span class="filter__span">По дате</span>
+                        </li>
+
+                        <li class="filter__li filterByRatings">
+                            <span class="filter__span">По количеству оценок</span>
+                        </li>
+
+                        <li class="filter__li filterByTime">
+                            <span class="filter__span">По актуальности</span>
+                        </li>
+
+                        <li class="filter__li filterByAnswers">
+                            <span class="filter__span">По количеству ответов</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="commentBlock__li">
+                <button type="button" class="commentsBtn favouriteMenuBtn">
+                    <span class="commentBlock__filter-favourite" href="#">Избранное</span>
+                    <img src="./svg/heart.svg" alt="Избранное">
+                </button>
+            </li>
+        </ul>
+
+        <div class="commentBlock__form">
+            <img class="form__avatar mainAvatar" src="./avatars/myavatar.svg" alt="Мой аватар">
+
+            <form class="form__name-text" action="" method="get">
+                <div class="form__labels">
+                    <label class="form__name" for="name">Максим Авдеенко</label>
+                    <label class="form__symbols" for="name">Макс. 1000 символов</label>
+                </div>
+                
+                <textarea class="form__input" contenteditable="true" name="textareaForm" rows="1" placeholder="Введите текст сообщения..."></textarea>
+            </form>
+            
+            <div>
+                <span class="form__maxlength">Слишком длинное сообщение</span>
+                <button class="form__button" type="button">Отправить</button>
+            </div>
+        </div>
+
+        <div class="commentList">
+            <div class="commentContainer">
+                <div class="commentBlock__commentaire mainComment favourited">
+                    <img class="form__avatar" src="./avatars/user1.svg" alt="">
+                        
+                    <div class="commentaire__name-text">
+                        <div class="commentaire__name-date">
+                            <span class="form__name">Алексей_1994b</span>
+                            <div class="form__dateBlock">
+                                <span class="form__date date">15.01</span>
+                                <span class="form__date time">13:55</span>
+                            </div>
+                        </div>
+
+                        <p class="commentaire__text">
+                            Самое обидное когда сценарий по сути есть - в виде книг, где нет сюжетных дыр, всё логично,
+                            стройное повествование и достаточно взять и экранизировать оригинал как это было в первых фильмах с минимальным
+                            количеством отсебятины и зритель с восторгом примет любой такой фильм и сериал, однако вместо этого 'Кольца власти'
+                            просто позаимствовали имена из оригинала, куски истории, мало связанные между собой и выдали очередной среднячковый сериал
+                            на один раз в лучшем случае.
+                        </p>
+
+                        <div class="commentaire__answerBlock">
+                            <button type="button" class="answerBlock__button answerBtn">
+                                <img src="./svg/answer.svg" alt="">
+                                <span class="answerBlock__span">Ответить</span>
+                            </button>
+                                
+                            <button type="button" class="answerBlock__button favouriteBtn heartAdded">
+                                <img class="answerBlock__img-favourite" src="./svg/favourite.svg" alt="">
+                                <span class="answerBlock__span answerBlock__span-favourite">В избранном</span>
+                            </button>
+                                
+                            <div class="ratingBlock unliked undisliked">
+                                <button class="ratingBtn dislikeBtn"></button>
+                                <span class="ratingNumber">6</span>
+                                <button class="ratingBtn likeBtn"></button>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="answersBlock">
+                    <div class="answerToUser commentBlock__commentaire nofavourited">
+                        <img class="form__avatar" src="./avatars/user2.svg" alt="">
+                                                        
+                        <div class="commentaire__name-text">
+                            <div class="commentaire__name-date">
+                                <span class="form__name">Джунбокс3000</span>
+                                <div class="answer__name">
+                                    <img src="./svg/answer.svg" alt="">
+                                    <span class="answerBlock__span">Алексей_1994b</span>
+                                </div>
+                                <div class="form__dateBlock">
+                                    <span class="form__date date">15.01</span>
+                                    <span class="form__date time">15:18</span>
+                                </div>
+                            </div>
+
+                            <p class="answerToUser__text">
+                                Наверное, самая большая ошибка создателей сериала была в том, что они поставили уж слишком много надежд на поддержку
+                                фанатов вселенной. Как оказалось на деле, большинство 'фанатов' с самой настоящей яростью и желчью стали уничтожать сериал,
+                                при этом объективности в отзывах самый минимум.
+                            </p>
+
+                            <div class="commentaire__answerBlock">                  
+                                <button type="button" class="answerBlock__button favouriteBtn heartNoAdded">
+                                    <img class="answerBlock__img-favourite" src="./svg/nofavourite.svg" alt="">
+                                    <span class="answerBlock__span answerBlock__span-favourite">В избранное</span>
+                                </button>
+                                                                
+                                <div class="ratingBlock unliked undisliked">
+                                    <button class="ratingBtn dislikeBtn"></button>
+                                    <span class="ratingNumber">3</span>
+                                    <button class="ratingBtn likeBtn"></button>
+                                </div>              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

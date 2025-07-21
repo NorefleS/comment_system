@@ -1,0 +1,157 @@
+@media screen and (max-width: 320px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .filter {
+        width: 211px;
+        height: 116px;
+    }
+
+    .filter__list {
+        gap: 10px;
+        justify-content: space-between;
+        padding: 8px 21px 10px 30px;
+    }
+
+    .filter__span {
+        font-size: 14px;
+    }
+
+    .commentBlock {
+        width: 301px;
+        margin-top: 25px;
+    }
+
+    .commentBlock__list {
+        gap: 19px;
+        flex-wrap: wrap;
+    }
+
+    .commentBlock__form {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 19px;
+    }
+
+    .commentBlock__filter-favourite {
+        font-size: 14px;
+    }
+
+    .mainAvatar {
+        width: 50px;
+    }
+
+    .form__name-text {
+        width: 300px;
+    }
+
+    .form__input {
+        width: 300px;
+    }
+
+    .form__button {
+        width: 300px;
+        height: 50px;
+        margin: 0px;
+        position: relative;
+    }
+
+    .form__labels {
+        position: absolute;
+        top: 14px;
+        left: 70px;
+    }
+
+    .form__symbols {
+        font-size: 10px;
+        margin-top: 6px;
+        margin-left: 124px;
+    }
+
+    .form__maxlength {
+        font-size: 12px;
+        top: 750px;
+        left: 60px;
+    }
+
+    .commentBlock__commentaire {
+        flex-direction: column;
+        position: relative;
+        gap: 15px;
+        margin-bottom: 0px;
+    }
+
+    .commentaire__name-date {
+        position: absolute;
+        top: 20px;
+        left: 70px;
+    }
+
+    .commentaire__name-date {
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .form__dateBlock {
+        gap: 5px;
+        font-size: 12px;
+        position: absolute;
+        left: 157px;
+        top: 0px;
+    }
+
+    .commentaire__name-text {
+        width: 300px;
+        gap: 0px;
+    }
+
+    .commentaire__text {
+        width: 300px;
+        font-size: 16px;
+    }
+
+    .form__avatar {
+        width: 50px;
+    }
+
+    .answersBlock {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .commentaire__answerBlock {
+        height: 65px;
+        gap: 15px;
+    }
+
+    .ratingBlock {
+        flex-direction: column;
+        gap: 0px;
+    }
+    
+    .answerToUser {
+        margin-left: 0px;
+    }
+
+    .answerToUser__text {
+        width: 300px;
+        font-size: 16px;
+    }
+
+    .answerBlock__span {
+        font-size: 16px;
+    }
+
+    .answerToUser__text {
+        flex-direction: column;
+        justify-content: start;
+        gap: 12px;
+    }
+
+    .answerInputBtn {
+        width: 300px;
+        height: 50px;
+    }
+}
